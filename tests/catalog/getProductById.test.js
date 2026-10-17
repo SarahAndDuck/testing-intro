@@ -43,7 +43,13 @@ describe('getProductById', () => {
   })
 
 
-  test.todo("строковый ID '1' возвращает null");
+  // test.todo("строковый ID '1' возвращает null");
+  test("строковый ID '1' возвращает null", () => {
+    const result = getProductById(products, '1');
+    expect(result).toEqual(null);
+  })
+
+
   test.todo('ID undefined возвращает null');
   test.todo('ID NaN возвращает null');
 });
