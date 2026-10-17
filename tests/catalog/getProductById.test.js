@@ -2,7 +2,14 @@ const products = require('../../src/data/products');
 const { getProductById } = require('../../src/catalog');
 
 describe('getProductById', () => {
-  test.todo('ID 1 возвращает products[0]');
+
+  // test.todo('ID 1 возвращает products[0]');
+  test('ID 1 возвращает products[0]', () => {
+    const result = getProductById(products, 1);
+    expect(result).toEqual(products[0]);
+  })
+
+
   test.todo('ID 4 возвращает products[3]');
   test.todo('ID 6 возвращает products[5]');
   test.todo('ID 0 возвращает null');
