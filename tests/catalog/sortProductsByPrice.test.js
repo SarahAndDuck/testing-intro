@@ -63,6 +63,13 @@ describe('sortProductsByPrice', () => {
   })
 
 
-  test.todo("'desc' не меняет исходный массив [1, 3, 4]");
+  // test.todo("'desc' не меняет исходный массив [1, 3, 4]");
+  test("'desc' не меняет исходный массив [1, 3, 4]", () => {
+    const idList = [1, 3, 4]
+    const filtredProducts = products.filter(item => idList.includes(item.id))
+    sortProductsByPrice(filtredProducts, 'desc');
+    const idFiltredProducts = filtredProducts.map(item => item.id)
+    expect(idFiltredProducts).toEqual([1, 3, 4]);
+  })
   test.todo('направление по умолчанию не меняет исходный массив всех товаров');
 });
