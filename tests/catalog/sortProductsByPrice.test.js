@@ -43,7 +43,16 @@ describe('sortProductsByPrice', () => {
   })
 
 
-  test.todo("товары [5, 2, 6] c 'desc' сортируются как [2, 5, 6]");
+  // test.todo("товары [5, 2, 6] c 'desc' сортируются как [2, 5, 6]");
+  test("товары[5, 2, 6] c 'desc' сортируются как[2, 5, 6]", () => {
+    const idList = [5, 2, 6]
+    const filtredProducts = products.filter(item => idList.includes(item.id))
+    const result = sortProductsByPrice(filtredProducts, 'desc');
+    const idResult = result.map(item => item.id)
+    expect(idResult).toEqual([2, 5, 6]);
+  })
+
+
   test.todo("'asc' не меняет исходный массив [1, 3, 4]");
   test.todo("'desc' не меняет исходный массив [1, 3, 4]");
   test.todo('направление по умолчанию не меняет исходный массив всех товаров');
