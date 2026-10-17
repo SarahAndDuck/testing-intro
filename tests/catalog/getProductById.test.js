@@ -11,6 +11,11 @@ describe('getProductById', () => {
 
 
   test.todo('ID 4 возвращает products[3]');
+  test('ID 4 возвращает products[3]', () => {
+    const result = getProductById(products, 4);
+    expect(result).toEqual(products[3]);
+  })
+
   test.todo('ID 6 возвращает products[5]');
   test.todo('ID 0 возвращает null');
   test.todo('ID 999 возвращает null');
