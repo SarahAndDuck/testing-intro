@@ -52,7 +52,12 @@ describe('filterByCategory', () => {
     expect(idResult).toEqual([]);
   })
 
-  test.todo("'toys' возвращает пустой массив");
+  // test.todo("'toys' возвращает пустой массив");
+  test("'toys' возвращает пустой массив", () => {
+    const result = filterByCategory(products, 'toys');
+    const idResult = result.map(item => item.id)
+    expect(idResult).toEqual([]);
+  })
   test.todo("'sports' возвращает пустой массив");
 });
 
