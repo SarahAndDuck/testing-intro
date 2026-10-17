@@ -60,7 +60,11 @@ describe('searchProducts', () => {
   })
 
 
-  test.todo("'\\t\\n' возвращает товары с ID [1, 2, 3, 4, 5, 6]");
-
+  // test.todo("'\\t\\n' возвращает товары с ID [1, 2, 3, 4, 5, 6]");
+  test("'\\t\\n' возвращает товары с ID [1, 2, 3, 4, 5, 6]", () => {
+    const result = searchProducts(products, '\t\n');
+    const idResult = result.map(item => item.id)
+    expect(idResult).toEqual([1, 2, 3, 4, 5, 6]);
+  })
 
 });
