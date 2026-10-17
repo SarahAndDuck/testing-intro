@@ -39,6 +39,11 @@ describe('filterByCategory', () => {
   })
 
   test.todo("'home' возвращает товары с ID [4, 5]");
+  test("'home' возвращает товары с ID [4, 5]", () => {
+    const result = filterByCategory(products, 'home');
+    const idResult = result.map(item => item.id)
+    expect(idResult).toEqual([4, 5]);
+  })
   test.todo("'clothes' возвращает пустой массив");
   test.todo("'toys' возвращает пустой массив");
   test.todo("'sports' возвращает пустой массив");
