@@ -50,6 +50,12 @@ describe('getProductById', () => {
   })
 
 
-  test.todo('ID undefined возвращает null');
+  // test.todo('ID undefined возвращает null');
+  test('ID undefined возвращает null', () => {
+    const result = getProductById(products, undefined);
+    expect(result).toEqual(null);
+  })
+
+
   test.todo('ID NaN возвращает null');
 });
