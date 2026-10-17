@@ -58,7 +58,14 @@ describe('filterByCategory', () => {
     const idResult = result.map(item => item.id)
     expect(idResult).toEqual([]);
   })
-  test.todo("'sports' возвращает пустой массив");
+
+  // test.todo("'sports' возвращает пустой массив");
+  test("'sports' возвращает пустой массив", () => {
+    const result = filterByCategory(products, 'sports');
+    const idResult = result.map(item => item.id)
+    expect(idResult).toEqual([]);
+  })
+
 });
 
 
