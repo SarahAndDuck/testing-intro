@@ -38,7 +38,13 @@ describe('searchProducts', () => {
     expect(idResult).toEqual([5]);
   })
 
-  test.todo("'наушники' возвращает товар с ID 1");
+  // test.todo("'наушники' возвращает товар с ID 1");
+  test("'наушники' возвращает товар с ID 1", () => {
+    const result = searchProducts(products, 'наушники');
+    const idResult = result.map(item => item.id)
+    expect(idResult).toEqual([1]);
+  })
+
   test.todo("пустая строка возвращает товары с ID [1, 2, 3, 4, 5, 6]");
   test.todo("строка из пробелов возвращает товары с ID [1, 2, 3, 4, 5, 6]");
   test.todo("'\\t\\n' возвращает товары с ID [1, 2, 3, 4, 5, 6]");
