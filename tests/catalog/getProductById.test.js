@@ -57,5 +57,10 @@ describe('getProductById', () => {
   })
 
 
-  test.todo('ID NaN возвращает null');
+  // test.todo('ID NaN возвращает null');
+  test('ID NaN возвращает null', () => {
+    const result = getProductById(products, NaN);
+    expect(result).toEqual(null);
+  })
+
 });
