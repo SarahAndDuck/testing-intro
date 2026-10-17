@@ -71,5 +71,12 @@ describe('sortProductsByPrice', () => {
     const idFiltredProducts = filtredProducts.map(item => item.id)
     expect(idFiltredProducts).toEqual([1, 3, 4]);
   })
-  test.todo('направление по умолчанию не меняет исходный массив всех товаров');
+
+  // test.todo('направление по умолчанию не меняет исходный массив всех товаров');
+  test('направление по умолчанию не меняет исходный массив всех товаров', () => {
+    sortProductsByPrice(products);
+    const idProducts = products.map(item => item.id)
+    expect(idProducts).toEqual([1, 2, 3, 4, 5, 6]);
+  })
+
 });
